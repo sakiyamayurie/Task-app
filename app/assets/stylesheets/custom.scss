@@ -57,11 +57,18 @@ p {
 
 /* ヘッダー */
 
-header {
+#header {
   
-  background-color: #ffb700;
+  background-color: teal;
 }
 
+.header-list {
+  color: #fff !important;
+}
+
+.header-list:hover {
+  color: silver !important;
+}
 #logo {
   float: left;
   margin-right: 10px;
@@ -81,7 +88,7 @@ header {
 
 .nav {
   padding-left: 0;
-  font-weight: bold;
+  list-style: none;
 }
 
 .nav ul li {
@@ -93,6 +100,7 @@ nav ul li:hover {
   color: #e2e2e2;
   text-decoration: none;
 }
+
 
 /* デバッグウインドウ */
 
