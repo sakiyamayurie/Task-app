@@ -69,6 +69,7 @@ p {
 .header-list:hover {
   color: silver !important;
 }
+
 #logo {
   float: left;
   margin-right: 10px;
@@ -82,7 +83,7 @@ p {
 }
 
 #logo:hover {
-  color: #708090;
+  color: silver;
   text-decoration: none;
 }
 
@@ -99,6 +100,10 @@ p {
 nav ul li:hover {
   color: #e2e2e2;
   text-decoration: none;
+}
+
+#dropdown-title {
+  background-color: teal;
 }
 
 
