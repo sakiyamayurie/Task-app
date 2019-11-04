@@ -3,10 +3,35 @@
 
 /* 共通 */
 
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 body {
   padding-top: 60px;
 }
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 2.428571429;
+  color: #333333;
+  background-color: #fff;
+}
+
+body {
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+  display: block;
+}
+
+
 
 .navbar-inverse {
   background-color: #29bdc1;
@@ -27,6 +52,8 @@ textarea {
 .center h1 {
   margin-bottom: 10px;
 }
+
+
 
 /* タイポグラフィ */
 
