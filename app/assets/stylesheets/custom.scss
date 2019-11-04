@@ -3,6 +3,10 @@
 
 /* 共通 */
 
+#top-main {
+  background-color: rgba(255,255,255,0);
+}
+
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -17,7 +21,7 @@ body {
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  line-height: 2.428571429;
+  line-height: 1.428571429;
   color: #333333;
   background-color: #fff;
 }
@@ -133,6 +137,10 @@ nav ul li:hover {
   background-color: teal;
 }
 
+form {
+  display: block;
+  margin-top: 0em;
+}
 
 /* デバッグウインドウ */
 
