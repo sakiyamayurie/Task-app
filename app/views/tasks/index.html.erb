@@ -13,4 +13,63 @@
     <meta name="csrf-param" content="authenticity_token">
     <meta name="csrf-token" content="COD3NS7TIFB3QwTI/KwYkwgL80y7LQ0N+BnOBfVRDDPK7buzyEn/Bj8wSfY83SrGmrTZWWgx3kGQX7UpC5IIeA==">
   </head>
+  <div class="container">
+    <h1>管理者のタスク一覧</h1>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <a class="btn btn-lg btn-primary pull-right" href="/users/1/tasks/new">タスク新規作成</a>
+        <table class="table table-hover" id="table-tasks">
+          <thead>
+            <tr>
+              <th>名称</th>
+              <th>作成日</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a id="task-name" href="/users/1/tasks/289">dddddd</a>
+              </td>
+              <td>2019/11/03 17:51</td>
+              <td>
+                <a class="btn btn-success" href="/users/1/tasks/289/edit">編集</a>
+                <a date-confirm="「dddddd」を削除します。よろしいですか？" class="btn btn-danger" rel="nofollow" data-method="delete" href="/users/1/tasks/289">削除</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a id="task-name" href="/users/1/tasks/277">ta@</a>
+              </td>
+              <td>2019/10/22 17:54</td>
+              <td>
+                <a class="btn btn-success" href="/users/1/tasks/277/edit">編集</a>
+                <a data-confirm="「ta@」を削除します。よろしいですか？" class="btn btn-danger" rel="nofollow" data-method="delete" href="/users/1/tasks/277">削除</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a id="task-name" href="/users/1/tasks/277">test</a>
+              </td>
+              <td>2019/10/20 19:30</td>
+              <td>
+                <a class="btn btn-success" href="/users/1/tasks/272/edit">編集</a>
+                <a data-confirm="「test」を削除します。よろしいですか？" class="btn btn-danger" rel="nofollow" data-method="delete" href="/users/1/tasks/272">削除</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a id="task-name" href="/users/1/tasks/226/">進捗確認</a>
+              </td>
+              <td>2019/10/5 12:06</td>
+              <td>
+                <a class="btn btn-success" href="/users/1/tasks/226/edit">編集</a>
+                
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </html>
