@@ -10,49 +10,6 @@
     <%= render 'layouts/shim' %>
   </head>
   <body>
-    <header class="navbar navbar-fixed-top navbar-default" id="header">
-      <div class="container">
-        <a id="logo" href="/">Task App</a>
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a class="header-list" href="/">トップ</a>
-            </li>
-            <li>
-              <a class="header-list" href="/users">利用者一覧</a>
-            </li>
-            <li>
-              <a class="header-list" href="/users/1/tasks/new">タスク作成</a>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle header-list" data-toggle="dropdown" id="dropdown-title">
-                 管理者
-                <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li class="dropdown-header">ユーザー</li>
-                <li>
-                  <a href="/users/1">プロフィール</a>
-                </li>
-                <li>
-                  <a href="/users/1/edit">設定</a>
-                </li>
-                <li class="dropdown-header">タスク</li>
-                <li>
-                  <a href="/users/1/tasks">タスク一覧</a>
-                </li>
-                <li class="diviber"></li>
-                <li>
-                  <a rel="nofollow" data-method="delete" href="/logout">ログアウト</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-  </body>
-     
     <%= render 'layouts/header' %>
     <div class="container">
       <% flash.each do |message_type, msg| %>
