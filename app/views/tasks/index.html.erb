@@ -2,40 +2,30 @@
 <% provide(:title, "index") %>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="task.scss">
-    <link rel="stylesheet" media="all" href="assets/application-0e5d7c8cc18cc18bd52eeabc1c5477d3b494997c763fe01630943b441776e7ab493d.css" date-turbolinks-track="reload">
-    <script src="/assets/application-b448791b18a9452cee489df10d734ac2ccdefa3cdd5db733d63988d121db2408.js" date-turbolinks-track="reload"></script>
-    <!--[if lt IE 9]>
-      <script
-      src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
-      </script>
-    <!--[endif]-->
     <title>管理者 | Task App</title>
-    <meta name="csrf-param" content="authenticity_token">
-    <meta name="csrf-token" content="COD3NS7TIFB3QwTI/KwYkwgL80y7LQ0N+BnOBfVRDDPK7buzyEn/Bj8wSfY83SrGmrTZWWgx3kGQX7UpC5IIeA==">
   </head>
-  <div class="main tasks-index">
-    <div class="container">
-    <h1>管理者のタスク一覧</h1>
-      <% @tasks.each do |task| %>
-        <div class="tasks-index-item">
-          <%= task %>
-        </div>
-      <% end %>
-    <div class="row">       
-      <div class="col-md-10 col-md-offset-1">
-        <a class="btn btn-lg btn-primary pull-right" href="/users/1/tasks/new">タスク新規作成</a>
-          <table class="table table-hover" id="table-tasks">
-            <thead>
-              <tr>
-                <th>名称</th>
-                <th>作成日</th>
-                <th></th>
-              </tr>
-            </thead>
-          </table>
+    <div class="main tasks-index">
+      <div class="container">
+      <h1>管理者のタスク一覧</h1>
+        <% @tasks.each do |task| %>
+          <div class="tasks-index-item">
+            <%= task %>
+          </div>
+        <% end %>
+      <div class="row">       
+        <div class="col-md-10 col-md-offset-1">
+          <a class="btn btn-lg btn-primary pull-right" href="/users/1/tasks/new">タスク新規作成</a>
+            <table class="table table-hover" id="table-tasks">
+              <thead>
+                <tr>
+                  <th>名称</th>
+                  <th>作成日</th>
+                  <th></th>
+                </tr>
+              </thead>
+            </table>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </html>
