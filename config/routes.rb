@@ -9,10 +9,7 @@ Rails.application.routes.draw do
   
   
   resources :users do
-    resources :tasks do
-      member do
-        post 'task'
-      end
-    end
+    resources :tasks 
+     
   end
 end
