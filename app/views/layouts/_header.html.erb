@@ -17,7 +17,18 @@
             </li>
             <li>
               <a class="header-list" href="/login">ログイン</a>
+              <ul class="dropdown-menu">
+                <li class="doropdown-header">ユーザー</li>
+                <li><%= link_to "プロフィール", current_user %></li>
+                <li><%= link_to "設定", edit_user_path(current_user) %></li>
+                <li class="doropdown-header">タスク</li>
+                <li><%= link_to "タスク一覧", user_tasks_path(current_user) %></li>
+                
+                <li class="divider"></li>
+                <li><%=link_to "ログアウト", logout_path, method: :delete %></li>
+              </ul>
             </li>
+            
           </ul>      
         </nav>
       </div>
