@@ -5,6 +5,7 @@ class TasksController < ApplicationController
   before_action :correct_user
   
   def index
+    @user = User.find(params[user_id])
     @tasks = @user.tasks
   end
   
@@ -16,13 +17,6 @@ class TasksController < ApplicationController
   end
   
   def create
-    @task = @user.tasks.build(task_params)
-    if @task.save
-      flash[:success] = "タスクを新規作成しました。"
-      redirect_to user_tasks_url @user
-    else
-      render :new
-    end
   end
   
   private
@@ -34,11 +28,5 @@ class TasksController < ApplicationController
     def set_user
       @user = User.find(params[:user_id])
     end
-      
-    def set_task
-      unless @task = @user.tasks.find_by(id: params[:id])
-        flash[:danger] = "権限がありません。"
-        redirect_to user_tasks_url @user
-      end
-    end
+  
 end
