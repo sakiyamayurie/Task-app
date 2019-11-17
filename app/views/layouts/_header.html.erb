@@ -1,12 +1,5 @@
 <% provide(:title, "Top") %>
-<html>
-  <head>
-    <title>Top | Task App</title>
-    <link rel="stylesheet" media="all" href="/assets/application-0e5d7c8….css" data-turbolinks-track="reload">
-    <script src="/assets/application-b448791….js" data-turbolinks-track="reload"></script>
-    
-  </head>
-  <body data-__gyazo-extension-added-paste-support="true">
+
     <header class="navbar navbar-fixed-top navbar-default" id="header">
       <div class="container">
         <a id="logo" href="∠">Task App</a>
@@ -22,7 +15,7 @@
                 <li><%= link_to "プロフィール", current_user %></li>
                 <li><%= link_to "設定" %></li>
                 <li class="doropdown-header">タスク</li>
-                <li><%= link_to "タスク一覧", user_tasks_path(current_user) %></li>
+                <li><%= link_to "タスク一覧" %></li>
                 
                 <li class="divider"></li>
                 <li><%=link_to "ログアウト", logout_path, method: :delete %></li>

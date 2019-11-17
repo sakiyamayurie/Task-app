@@ -13,8 +13,14 @@
               <th></th>
             </tr>
           </thead>
-          
         </table>
+        <% @tasks.each do |task| %>
+          <div class="taks-index-item">
+            <div class="task-right">
+              <%= task.description %>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
