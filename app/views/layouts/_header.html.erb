@@ -1,70 +1,41 @@
 <% provide(:title, "Top") %>
-
-    <header class="navbar navbar-fixed-top navbar-default" id="header">
-      <div class="container">
-        <a id="logo" href="∠">Task App</a>
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a class="header-list" href="∠">トップ</a>
-            </li>
-            <li>
-              <a class="header-list" href="/login">ログイン</a>
-              <ul class="dropdown-menu">
-                <li class="doropdown-header">ユーザー</li>
-                <li><%= link_to "プロフィール", current_user %></li>
-                <li><%= link_to "設定" %></li>
-                <li class="doropdown-header">タスク</li>
-                <li><%= link_to "タスク一覧" %></li>
+<header class="navbar navbar-fixed-top navbar-default" id="header">
+  <div class="container">
+    <%= link_to "Task App", root_path, id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "トップ", root_path, class: "header-list" %></li>
+          <li class="dropdown">
+            <ul class="dropdown-menu">
+              <li class="doropdown-header">ユーザー</li>
+              <li><%= link_to "プロフィール", current_user %></li>
+              <li><%= link_to "設定" %></li>
+              <li class="doropdown-header">タスク</li>
+              <li><%= link_to "タスク一覧", user_task_path(current_user) %></li>
                 
-                <li class="divider"></li>
-                <li><%=link_to "ログアウト", logout_path, method: :delete %></li>
-              </ul>
-            </li>
-            
-          </ul>      
-        </nav>
-      </div>
-    </header>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-7">
-          <div class="center jumbotron" id="top-main">
-            <h1 id="top-main-title">TaskApp</h1>
-            <p>TaskAppは簡易ToDo管理ツールです。</p>
-            <p>↓↓初めてのご利用↓↓</p>
-            <a class="btn btn-lg btn-success" href="/signup">アカウント作成</a>
-            <div style="margin-top: 10px;">
-              <a class="btn btn-danger" href="/guest-admin/login">ゲストログイン（管理権限）</a>
-              <a class="btn btn-warning" href="/guest-login">ゲストログイン（一般権限）</a>
-            </div>
+              <li class="divider"></li>
+              <li><%=link_to "ログアウト", logout_path, method: :delete %></li>
+            </ul>
+          </li>
+          <li><%= link_to "ログイン", login_path, class: "header-list" %></li>
+      </ul>      
+    </nav>
+  </div>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <div class="center jumbotron" id="top-main">
+        <h1 id="top-main-title">TaskApp</h1>
+          <p>TaskAppは簡易ToDo管理ツールです。</p>
+          <p>↓↓初めてのご利用↓↓</p>
+          <a class="btn btn-lg btn-success" href="/signup">アカウント作成</a>
+          <div style="margin-top: 10px;">
+            <a class="btn btn-danger" href="/guest-admin/login">ゲストログイン（管理権限）</a>
+            <a class="btn btn-warning" href="/guest-login">ゲストログイン（一般権限）</a>
           </div>
-        </div>
-        <div class="col-md-4">
-          <h1>ログイン</h1>
-          <form action="/login" accept-charset="UTF-8" method="post">
-            <input name="UTF8" type="hidden" value="✓">
-            <input type="hidden" name="authenticity_token" value="7Sa2Ofzu2QUHtPGS2Uwftrt+kALMhuhp3R1B4BVahyMhxqtOzd6Hs1WFf5bRF2cB4rl+SCsUm+aUw8A2RlrkIQ==">
-            <label class="label-form" for="session_email">メールアドレス</label>
-            <input class="form-control" type="email" name="session[email]">
-            <label class="label-form" for="session_password">パスワード</label>
-            <input class="form-control" type="password" name="session[password]">
-            <label class="checkbox inline checkbox-login" for="remember-me">
-              <input name="session[remember_me]" type="hidden" value="0">
-              <input id="remember-me" type="checkbox" value="1" name="session[remember_me]">
-              <span>ログイン情報を記憶する</span>
-            </label>
-            <input type="submit" name="commit" value="ログイン" class="btn btn-primary btn-block btn-form" date-disable-with="ログイン">
-          </form>
-        </div>
       </div>
     </div>
-    <div id="UMS_TOOLTIP" style="position: absolute; cursor: pointer; z-index: 2147483647; background: transparent; top: -100000px; left: -100000px;"></div>
-  </body>
-  <umsdataelement id="UMSSendDataEventElement" date="https://task-app-basic.herokuapp.com/login" docguid="null"></umsdataelement>
-  <div id="TAG_ID4TOOLBAR_UMS_GUID" style="display: none;">432C1519-CC64-F2B1-989E-6654D1C47656</div>
-  <div id="tmtoolbar_ums_injected" style="display: none;">init_ums</div>
-  <div id="TAG_ID4TOOLBAR_GUID" style="display: none;">324B31D6-97FD-25BB-57F5-192F0088B946</div>
-  <div id="tmtoolbar_message" style="display: none;">init</div>
-  <div id="tmtoolbar_injected" style="display: none;">init</div>
-</html>
+  </div>
+</div>
+        
