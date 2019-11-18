@@ -1,18 +1,24 @@
 <% provide(:title, "Top") %>
 <header class="navbar navbar-fixed-top navbar-default" id="header">
   <div class="container">
-    <%= link_to "Task App", root_path, id: "logo" %>
+    <%= link_to "Task App", root_path, id: "header-list" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "トップ", root_path, class: "header-list" %></li>
+        <% logged_in? %>
+          <li><%= link_to "Users", "#", id: "header-list" %></li>
+          <li><%= link_to "Task", new_user_task_path, id: "header-list" %></li>
           <li class="dropdown">
+            <a href="#" class="dropdown-toggle" date-toggle="dropdown" aria-expanded="true">
+              <%= yield(:title) %>
+               <b class="caret"></b>
+            </a>
             <ul class="dropdown-menu">
               <li class="doropdown-header">ユーザー</li>
               <li><%= link_to "プロフィール", current_user %></li>
               <li><%= link_to "設定" %></li>
               <li class="doropdown-header">タスク</li>
-              <li><%= link_to "タスク一覧", user_task_path(current_user) %></li>
-                
+              <li><%= link_to "タスク一覧", user_tasks_path(current_user) %></li>
               <li class="divider"></li>
               <li><%=link_to "ログアウト", logout_path, method: :delete %></li>
             </ul>
