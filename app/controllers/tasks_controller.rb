@@ -2,8 +2,7 @@ class TasksController < ApplicationController
   before_action :set_user
   
   def index
-    @user = User.find(params[user.id])
-    @task = @user.tasks
+    @tasks = @user.tasks
   end
   
   def show

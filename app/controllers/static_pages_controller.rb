@@ -1,7 +1,9 @@
 class StaticPagesController < ApplicationController
   def top
+    
   end
   
-  def show
+  def new
   end
+  
 end
