@@ -1,4 +1,4 @@
-<% provide (:title, 'New Task') %>
+<% provide(:title, 'New Task') %>
 
 <h1>タスク新規作成</h1>
 
@@ -6,6 +6,8 @@
   <div class="col-md-8 col-md-offset-2">
     <%= form_with(model: @task, url: user_tasks_path(@user), local: true) do |f| %>
       <%= render partial: 'shared/error_messages', locals: { obj: @task } %>
-      
+      <textarea>"名称"</textarea>
+    <input type="submit" value="新規登録ボタン">
+    <% end %>
   </div>
 </div>
