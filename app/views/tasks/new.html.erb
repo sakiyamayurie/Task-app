@@ -6,8 +6,14 @@
   <div class="col-md-8 col-md-offset-2">
     <%= form_with(model: @task, url: user_tasks_path(@user), local: true) do |f| %>
       <%= render partial: 'shared/error_messages', locals: { obj: @task } %>
-      <textarea>"名称"</textarea>
-    <input type="submit" value="新規登録ボタン">
+      
+      <%= f.label :name, class: "label-form" %>
+      <%= f.text_field :name, class: "form-control" %>
+      
+      <%= f.label :description, class: "label-form" %>
+      <%= f.text_area :description, rows: 5, class: "form-control" %>
+      
+      <%= f.submit "新規登録", class: "btn btn-lg btn-primary btn-form" %>
     <% end %>
   </div>
 </div>
