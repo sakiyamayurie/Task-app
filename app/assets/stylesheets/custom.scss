@@ -3,46 +3,8 @@
 
 /* 共通 */
 
-#top-main {
-  background-color: rgba(255,255,255,0);
-}
-
-.container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 body {
   padding-top: 60px;
-}
-
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.428571429;
-  color: #333333;
-  background-color: #fff;
-}
-
-body {
-  margin: 0;
-}
-
-body {
-  box-sizing: border-box;
-  display: block;
-}
-
-#top-main-title {
-  font-style: italic;
-  font-weight: bold;
-}
-
-
-.navbar-inverse {
-  background-color: #29bdc1;
 }
 
 section {
@@ -60,6 +22,31 @@ textarea {
 .center h1 {
   margin-bottom: 10px;
 }
+
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.label-form {
+  margin-top: 5px;
+}
+
+#top-main-title {
+  font-style: italic;
+  font-weight: bold;
+}
+
+
+.navbar-inverse {
+  background-color: #29bdc1;
+}
+
+
+
 
 .btn-form {
   margin-top: 10px;
@@ -160,9 +147,7 @@ label {
   font-weight: 700;
 }
 
-.label-form {
-  margin-top: 5px;
-}
+
 
 
 
