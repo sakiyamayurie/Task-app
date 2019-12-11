@@ -1,7 +1,7 @@
 class UsersController < ApplicationController 
   before_action :set_user, only: %i(show edit update destroy)
   before_action :logged_in_user, only: %i(index show edit update destroy)
-  before_action :correct_user, only: %i(edit update)
+  before_action :current_user, only: %i(edit update)
 
   def index
     @users = User.paginate(page: params[:page], per_page: 20)
@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash[:success] = '新規作成に成功しました。'
+      flash[:success] = 'ユーザーの新規作成に成功しました。'
       redirect_to @user
     else
       render :new
@@ -30,6 +30,15 @@ class UsersController < ApplicationController
   end
     
   def edit
+  end
+  
+  def update
+    if @user.update_attributes(user_params)
+      flash[:success] = "ユーザー情報を更新しました。"
+      redirect_to @user
+    else
+      render :edit
+    end
   end
   
   
