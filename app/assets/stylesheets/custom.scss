@@ -64,68 +64,37 @@ p {
   background-color: teal;
 }
 
-.header-list {
-  color: #fff !important;
-}
-
-.header-list:hover {
-  color: silver !important;
-}
-
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: white;
+  color: #fff;
+  font-style: italic;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
-  font-style: italic;
-  
-}
+  &:hover {
+    color: silver;
+    text-decoration: none;
+  }
+}  
 
-#logo:hover {
-  color: silver;
-  text-decoration: none;
-}
-
-.nav {
-  padding-left: 0;
-  list-style: none;
-}
-
-.nav ul li {
-  color: white;
-}
-
-
-nav ul li:hover {
-  color: #e2e2e2;
-  text-decoration: none;
+li .header-list {
+  color: #fff !important;
+  font-weight: bold;
+  &:hover {
+    color: silver !important;
+  }
 }
 
 #dropdown-title {
   background-color: teal;
 }
 
-form {
-  display: block;
-  margin-top: 0em;
+li .dropdown-header {
+  background-color: rgba(200, 200, 200, 0.5);
+  font-weight: bold;
 }
-
-
-
-
-label {
-  display: inline-block;
-  max-width: 100px;
-  margin-bottom: 5px;
-  font-weight: 700;
-}
-
-
-
-
 
 /* デバッグウインドウ */
 
