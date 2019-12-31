@@ -1,6 +1,8 @@
 class TasksController < ApplicationController
+  before_action :logget_in, only: %i(show index new create update destroy)
   before_action :set_user
   before_action :set_task, only: %i(show edit update destroy)
+  before_action :current_user, only: %i(new)
 
   def index
     @tasks = @user.tasks
@@ -11,6 +13,7 @@ class TasksController < ApplicationController
 
   def new
     @task = Task.new
+    
   end
   
   def create
@@ -57,5 +60,9 @@ class TasksController < ApplicationController
         flash[:danger] = "権限がありません。"
         redirect_to user_tasks_url @user
       end
+    end
+    
+    def current_user
+      @task = @user.tasks(id: params[:id])
     end
 end
