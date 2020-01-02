@@ -60,4 +60,15 @@ class TasksController < ApplicationController
         redirect_to user_tasks_url @user
       end
     end
+    
+    def logged_in_user
+      unless logged_in?
+        flash[:danger] = "ログインしてください。"
+        redirect_to login_url
+      end
+    end
+    
+    def correct_user
+      redirect_to(root_url) unless @user == current_user
+    end
 end
