@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
   before_action :set_user
+  before_action :set_task_2, only: %i(edit)
   before_action :set_task, only: %i(show edit update destroy)
   before_action :logged_in_user
   before_action :correct_user
@@ -61,6 +62,13 @@ class TasksController < ApplicationController
       end
     end
     
+    def set_task_2
+      unless @user == current_user
+        flash[:danger] = "権限がありません。"
+        redirect_to user_tasks_url current_user
+      end
+    end
+     
     def logged_in_user
       unless logged_in?
         flash[:danger] = "ログインしてください。"
